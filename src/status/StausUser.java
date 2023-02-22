@@ -11,24 +11,39 @@ package status;
  */
 public class StausUser 
 {
-   public void statusDetail(String code)
+
+    public enum Status {
+        REJECTED,
+        PENDING,
+        PROCESSING,
+        APPROVED
+    }
+
+   public void statusDetail(Status x)
 {
-switch(code.toUpperCase())
+switch(x)
         {
-        case "ZERO": System.out.println("REJECTED");
-        break;
-        case "ONE": System.out.println("PENDING");
-        break;
-        case "TWO":
-        System.out.println("PROCESSING");
-        break;
-        case "THREE": 
-            System.out.println("APPROVED");
-        break;
+        case REJECTED: 
+            System.out.println(Status.REJECTED);
+            break;
+        
+        case PENDING: 
+            System.out.println(Status.PENDING);
+            break;
+        
+        case PROCESSING:
+            System.out.println(Status.PROCESSING);
+            break;
+        
+        case APPROVED: 
+            System.out.println(Status.APPROVED);
+            break;
+        
         default:
-         System.out.println("NOT VALID CODE");
-        break;
+            System.out.println("NOT VALID CODE");
+            break;
         }
 }
- 
+
+
 }
