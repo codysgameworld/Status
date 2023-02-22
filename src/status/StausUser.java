@@ -12,6 +12,13 @@ package status;
 public class StausUser 
 {
 
+    public enum Code {
+        ZERO,
+        ONE,
+        TWO,
+        THREE
+    }
+
     public enum Status {
         REJECTED,
         PENDING,
@@ -19,23 +26,23 @@ public class StausUser
         APPROVED
     }
 
-   public void statusDetail(Status x)
+   public void statusDetail(String code)
 {
-switch(x)
+switch(Code.valueOf(code))
         {
-        case REJECTED: 
+        case ZERO: 
             System.out.println(Status.REJECTED);
             break;
         
-        case PENDING: 
+        case ONE: 
             System.out.println(Status.PENDING);
             break;
         
-        case PROCESSING:
+        case TWO:
             System.out.println(Status.PROCESSING);
             break;
         
-        case APPROVED: 
+        case THREE: 
             System.out.println(Status.APPROVED);
             break;
         

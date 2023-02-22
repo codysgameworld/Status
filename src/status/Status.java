@@ -24,10 +24,10 @@ public class Status {
     public static void main(String[] args)
     {
     Scanner in = new Scanner(System.in);
-    System.out.println("Enter the user status code (0 - REJECTED, 1 - PENDING, 2 - PROCESSING, 3 - APPROVED) in int");
-    int code = in.nextInt();
+    System.out.println("Enter the user status code (ZERO, ONE, TWO, THREE) in string");
+    String code = in.next();
     StausUser t = new StausUser();
-    t.statusDetail(StausUser.Status.values()[code]);
+    t.statusDetail(code.toUpperCase());
     }
     
 }
